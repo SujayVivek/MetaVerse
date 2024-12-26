@@ -19,7 +19,7 @@ router.post('/signup', async (req, res)=>{
 
     try{
         const user = await client.user.create({
-            data:{ //Need to just do npm prisma migrate dev in DB to save the new prisma settings
+            data:{ //Pls do this Need to just do npm prisma migrate dev in DB to save the new prisma settings
                 username: parsedData.data.username,
                 password: hashedPassword,
                 role: parsedData.data.type === "admin"? "Admin": "User",
